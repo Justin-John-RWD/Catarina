@@ -1,0 +1,55 @@
+		html, body 		{ margin: 0; padding: 0; }
+		body 			{
+  			 color: #333; font: 12px Arial; line-height: 18px; }
+		h2				{ color: #333; }
+		h3              { color: #004b6f;}
+        
+		h1              { font-size:25px; line-height:20px;}
+		
+		a				{ color: #337810; }
+		p				{ margin: 0 0 18px; }
+        table           { margin-left:auto; margin-right:auto; }
+        
+		#wrapper		{ float: left; width: 100%; }
+		
+		/* Header */
+		#header			{ background: #73a1c5; border-bottom: 2px solid #ddd; }
+		#header h1  	{ color: #004b6f; margin: 0 0 3px; padding: 24px 18px 0; }
+		#header p		{ color: #666; font-size: 11px; font-weight: bold; padding: 0 18px; }
+		
+		#header img      {float:right; margin:5px; margin-right: 25px;} 
+		
+		/* Content Style */
+		#navigation		{ padding-left: 18px; font: 12px arial;}
+		#navigation ul	{ padding: 0 0px 9px; margin: 10px; list-style:none }
+
+                #navigation a { text-decoration:none }
+		
+		#extra			{ padding-top:8;  padding-right: 5px; text-align: center;}
+		#extra small	{ font-size: 11px; line-height: 18px; }
+		
+		#content p, #contentnoextra p, #extra p { padding-right: 8px; }
+		
+		/* Content Positioning & Size */
+		#navigation		{ float: left; width: 190px; margin-left: -100%; }
+		#content		{ margin: 0 225px 36px; 225px text-align:justify;}
+		#contentnoextra		{ float: left; margin: 0 25px 36px 225px; text-align:justify;}
+
+
+
+		#extra			{ float: left; margin-left: -220px; width: 215px;}	
+
+.contentinsert { float: right; border-style:solid; border-color:#808080; border-width:thin; width: 250px; background-color:#FBFFB0; margin-left:20px; padding:10px; text-align:left; }
+
+
+        .contentinsert small { font-size: 11px; line-height: 110%; font-weight:bold; color:#808080;}
+        .contentinsert h3 { line-height: 10px;}
+        .contentinsert ul { margin-left: -12px;}
+        .contentinsert li { margin-left: -12px;}
+
+		/* Footer */
+		#footer			{ background: #333; border-bottom: 2px solid #999; clear: left; width: 100%; }
+		#footer a		{ color: #eee; }
+		#footer	p		{ color: #ccc; margin: 0; padding: 0 18px 10px; }
+		#footer ul		{ border-bottom: 1px solid #555; list-style: none; margin: 0 18px 6px; padding: 10px 0 6px; }
+		#footer li		{ display: inline; font-size: 11px; font-weight: bold; padding-right: 5px; }
