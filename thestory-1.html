@@ -25,11 +25,26 @@
 </head>
 <body>
 <div id="container">
-<div id="header">
+  <div id="container">
 
-  <!--#include file="header.htm" -->
 
-</div>
+
+    <script>
+      // Load the header dynamically
+      fetch('header.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load header file');
+              }
+              return response.text();
+          })
+          .then(html => {
+              document.getElementById('header').innerHTML = html;
+          })
+          .catch(error => {
+              console.error('Error loading header:', error);
+          });
+  </script>
 
 <div id="wrapper">
 <div id="content">
@@ -87,11 +102,16 @@ If the Kepping Title is Clean and Solid, then so must also be the Cooperativa's 
 </div>
 
 </div>
-<div id="navigation">
+<div id="navigation"></div>
+<script>
+    fetch('menu.html') // Replace with your menu file path
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
 
-  <!--#include file="menu.htm" -->
-
-</div>
 
 <div class="c1" id="extra">
 <h4>Scans of Original Documents</h4>
@@ -101,8 +121,8 @@ If the Kepping Title is Clean and Solid, then so must also be the Cooperativa's 
 <td colspan="2">Agrarian Reform Title</td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaARTitle1.jpg" target="_blank"><img src="Documents/CatarinaARTitle1.jpg" width="40" alt="Agrarian Reform Title Pg1" /><br/>Pg 1</a></td>
-<td><a href="Documents/CatarinaARTitle2.jpg" target="_blank"><img src="Documents/CatarinaARTitle2.jpg" width="40" alt="Agrarian Reform Title Pg2" /><br/>Pg 2</a></td>
+<td><a href="documents/CatarinaARTitle1.jpg" target="_blank"><img src="documents/CatarinaARTitle1.jpg" width="40" alt="Agrarian Reform Title Pg1" /><br/>Pg 1</a></td>
+<td><a href="documents/CatarinaARTitle2.jpg" target="_blank"><img src="documents/CatarinaARTitle2.jpg" width="40" alt="Agrarian Reform Title Pg2" /><br/>Pg 2</a></td>
 
 </tr>
 </table
@@ -114,13 +134,13 @@ If the Kepping Title is Clean and Solid, then so must also be the Cooperativa's 
 <td colspan="2">OOT Constancia<br/>Ratification of Title</td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaMinHacConstanciaTitulo1.jpg" target="_blank"><img src="Documents/CatarinaMinHacConstanciaTitulo1.jpg" width="40" alt="OOT Constancia-Pg1" /><br/>Pg 1</a></td>
-<td><a href="Documents/CatarinaMinHacConstanciaTitulo2.jpg" target="_blank"><img src="Documents/CatarinaMinHacConstanciaTitulo2.jpg" width="40" alt="OOT Constancia-Pg1" /><br/>Pg 2</a></td>
+<td><a href="documents/CatarinaMinHacConstanciaTitulo1.jpg" target="_blank"><img src="documents/CatarinaMinHacConstanciaTitulo1.jpg" width="40" alt="OOT Constancia-Pg1" /><br/>Pg 1</a></td>
+<td><a href="documents/CatarinaMinHacConstanciaTitulo2.jpg" target="_blank"><img src="documents/CatarinaMinHacConstanciaTitulo2.jpg" width="40" alt="OOT Constancia-Pg1" /><br/>Pg 2</a></td>
 </tr>
 <tr>
 
 <td colspan="2"><br/><br/>
-<a href="Documents/CatarinaPlan.jpg" target="_blank"><img src="Documents/CatarinaPlan.jpg" width="100" alt="Property Plan" /><br />
+<a href="documents/CatarinaPlan.jpg" target="_blank"><img src="documents/CatarinaPlan.jpg" width="100" alt="Property Plan" /><br />
 Property Plan</a>
 </td>
 </tr>

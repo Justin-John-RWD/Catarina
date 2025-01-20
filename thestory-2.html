@@ -25,9 +25,26 @@
 </head>
 <body>
 <div id="container">
-<div id="header">
-  <!--#include file="header.htm" -->
-</div>
+  <div id="container">
+
+
+
+    <script>
+      // Load the header dynamically
+      fetch('header.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load header file');
+              }
+              return response.text();
+          })
+          .then(html => {
+              document.getElementById('header').innerHTML = html;
+          })
+          .catch(error => {
+              console.error('Error loading header:', error);
+          });
+  </script>
 <div id="wrapper">
 <div id="content">
 <h3>Beginning of Conflict</h3>
@@ -46,16 +63,21 @@ The Cooperativa was subsequently forcibly removed from the property.  They respo
 </div>
 </div>
 
-<div id="navigation">
+<div id="navigation"></div>
+<script>
+    fetch('menu.html') // Replace with your menu file path
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
 
-  <!--#include file="menu.htm" -->
-
-</div>
 <div class="c1" id="extra">
 <h4>Scans of Original Documents</h4>
-<p><a href="Documents/CatarinaAlcaldiaDeclJudicial1.jpg" target="_blank"><img src="Documents/CatarinaAlcaldiaDeclJudicial1.jpg" width="50" alt="Declaracion Jurada page 1" /><br />
+<p><a href="documents/CatarinaAlcaldiaDeclJudicial1.jpg" target="_blank"><img src="documents/CatarinaAlcaldiaDeclJudicial1.jpg" width="50" alt="Declaracion Jurada page 1" /><br />
 Declaracion Jurada-page 1</a></p>
-<p><a href="Documents/CatarinaAlcaldiaDeclJudicial2.jpg" target="_blank"><img src="Documents/CatarinaAlcaldiaDeclJudicial1.jpg" width="50" alt="Declaracion Jurada page 2" /><br />
+<p><a href="documents/CatarinaAlcaldiaDeclJudicial2.jpg" target="_blank"><img src="documents/CatarinaAlcaldiaDeclJudicial1.jpg" width="50" alt="Declaracion Jurada page 2" /><br />
 Declaracion Jurada-page 2</a></p>
 </div>
 <div id="footer">

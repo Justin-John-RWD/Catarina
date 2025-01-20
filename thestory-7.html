@@ -25,9 +25,26 @@
 </head>
 <body>
 <div id="container">
-<div id="header">
-  <!--#include file="header.htm" -->
-</div>
+  <div id="container">
+
+
+
+    <script>
+      // Load the header dynamically
+      fetch('header.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load header file');
+              }
+              return response.text();
+          })
+          .then(html => {
+              document.getElementById('header').innerHTML = html;
+          })
+          .catch(error => {
+              console.error('Error loading header:', error);
+          });
+  </script>
 <div id="wrapper">
 <div id="content">
 <h3>Lawsuit seeking Eviction and Restitution</h3>
@@ -42,9 +59,16 @@ Finally the District Judge of Masaya issued an <a href="cat-police-order.jpg" ta
 Armed Security was contracted and a workforce of more than 60 men recruited, including members of the Cooperativa Felix Cruz Hernandez, to assist in securing the property once the Judge officially transferred Possession to Justin Dobson.<br /></p>
 </div>
 </div>
-<div id="navigation">
-  <!--#include file="menu.htm" -->
-</div>
+<div id="navigation"></div>
+<script>
+    fetch('menu.html') // Replace with your menu file path
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
+
 <div class="c1" id="extra">
 <h4>Scans of Original Documents</h4>
 <table width="150">
@@ -52,12 +76,12 @@ Armed Security was contracted and a workforce of more than 60 men recruited, inc
 <td colspan="3">Sentence Execution Order for Restitution</td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaCPCertSentence1.jpg" target="_blank"><img src="Documents/CatarinaCPCertSentence1.jpg" width="40" alt="" /><br />
+<td><a href="documents/CatarinaCPCertSentence1.jpg" target="_blank"><img src="documents/CatarinaCPCertSentence1.jpg" width="40" alt="" /><br />
 Pg 1</a></td>
-<td><a href="Documents/CatarinaCPCertSentence2.jpg" target="_blank"><img src="Documents/CatarinaCPCertSentence2.jpg" width="40" alt="" /><br />
+<td><a href="documents/CatarinaCPCertSentence2.jpg" target="_blank"><img src="documents/CatarinaCPCertSentence2.jpg" width="40" alt="" /><br />
 Pg 2</a></td>
 
-<td><a href="Documents/CatarinaCPCertSentence3.jpg" target="_blank"><img src="Documents/CatarinaCPCertSentence3.jpg" width="40" alt="" /><br />
+<td><a href="documents/CatarinaCPCertSentence3.jpg" target="_blank"><img src="documents/CatarinaCPCertSentence3.jpg" width="40" alt="" /><br />
 Pg 3</a></td>
 </tr>
 </table>

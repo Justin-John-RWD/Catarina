@@ -25,12 +25,26 @@
 </head>
 <body>
 <div id="container">
-<div id="header">
-
-  <!--#include file="header.htm" -->
+  <div id="container">
 
 
-</div>
+
+    <script>
+      // Load the header dynamically
+      fetch('header.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load header file');
+              }
+              return response.text();
+          })
+          .then(html => {
+              document.getElementById('header').innerHTML = html;
+          })
+          .catch(error => {
+              console.error('Error loading header:', error);
+          });
+  </script>
 <div id="wrapper">
 <div id="content">
 <h3>Arrival of Foreign Investors</h3>
@@ -51,9 +65,16 @@ The final purchase of the Property by Mr Dobson and his wife from the Cooperativ
 
 </div>
 
-<div id="navigation">
-  <!--#include file="menu.htm" -->
-</div>
+<div id="navigation"></div>
+<script>
+    fetch('menu.html') // Replace with your menu file path
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
+
 
 <div class="c1" id="extra">
 <h4>Scans of Original Documents</h4>
@@ -63,18 +84,18 @@ The final purchase of the Property by Mr Dobson and his wife from the Cooperativ
 <td colspan="3">Escritura of Compra/Venta</td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaEscritura1.jpg" target="_blank"><img src="Documents/CatarinaEscritura1.jpg" width="40" alt="Escritura of Compra/Venta Pg1" /><br/>Pg 1</a></td>
-<td><a href="Documents/CatarinaEscritura2.jpg" target="_blank"><img src="Documents/CatarinaEscritura2.jpg" width="40" alt="Escritura of Compra/Venta Pg2" /><br/>Pg 2</a></td>
+<td><a href="documents/CatarinaEscritura1.jpg" target="_blank"><img src="documents/CatarinaEscritura1.jpg" width="40" alt="Escritura of Compra/Venta Pg1" /><br/>Pg 1</a></td>
+<td><a href="documents/CatarinaEscritura2.jpg" target="_blank"><img src="documents/CatarinaEscritura2.jpg" width="40" alt="Escritura of Compra/Venta Pg2" /><br/>Pg 2</a></td>
 
-<td><a href="Documents/CatarinaEscritura3.jpg" target="_blank"><img src="Documents/CatarinaEscritura3.jpg" width="40" alt="Escritura of Compra/Venta Pg3" /><br/>Pg 3</a></td>
+<td><a href="documents/CatarinaEscritura3.jpg" target="_blank"><img src="documents/CatarinaEscritura3.jpg" width="40" alt="Escritura of Compra/Venta Pg3" /><br/>Pg 3</a></td>
 </tr>
 <tr>
 <td colspan="3"><br/></td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaEscritura4.jpg" target="_blank"><img src="Documents/CatarinaEscritura4.jpg" width="40" alt="Escritura of Compra/Venta Pg4" /><br/>Pg 4</a></td>
-<td><a href="Documents/CatarinaEscritura5.jpg" target="_blank"><img src="Documents/CatarinaEscritura5.jpg" width="40" alt="Escritura of Compra/Venta Pg5" /><br/>Pg 5</a></td>
-<td><a href="Documents/CatarinaEscritura6.jpg" target="_blank"><img src="Documents/CatarinaEscritura6.jpg" width="40" alt="Escritura of Compra/Venta Pg6" /><br/>Pg 6</a></td>
+<td><a href="documents/CatarinaEscritura4.jpg" target="_blank"><img src="documents/CatarinaEscritura4.jpg" width="40" alt="Escritura of Compra/Venta Pg4" /><br/>Pg 4</a></td>
+<td><a href="documents/CatarinaEscritura5.jpg" target="_blank"><img src="documents/CatarinaEscritura5.jpg" width="40" alt="Escritura of Compra/Venta Pg5" /><br/>Pg 5</a></td>
+<td><a href="documents/CatarinaEscritura6.jpg" target="_blank"><img src="documents/CatarinaEscritura6.jpg" width="40" alt="Escritura of Compra/Venta Pg6" /><br/>Pg 6</a></td>
 </tr>
 </table>
 

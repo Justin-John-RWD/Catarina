@@ -59,9 +59,26 @@
 
 
 <div id="container">
-<div id="header">
-  <!--#include file="header.htm" -->
-</div>
+  <div id="container">
+
+
+
+    <script>
+      // Load the header dynamically
+      fetch('header.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load header file');
+              }
+              return response.text();
+          })
+          .then(html => {
+              document.getElementById('header').innerHTML = html;
+          })
+          .catch(error => {
+              console.error('Error loading header:', error);
+          });
+  </script>
 
 <div id="wrapper">
 
@@ -83,9 +100,9 @@
 <b>1984 Junio 22</b> Asignacion con Titulo Reforma Agraria "La Finca Terranica" a la "Cooperativa Felix Cruz Hernandez" - Firmado por Jaime Wheelock Roman
 <ul>
 <li>Titulo de Reforma Agraria:
-<a href="Documents/CatarinaARTitle1.jpg" target="_blank">P #1</a>
+<a href="documents/CatarinaARTitle1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
-<a href="Documents/CatarinaARTitle2.jpg" target="_blank">P #2</a>
+<a href="documents/CatarinaARTitle2.jpg" target="_blank">P #2</a>
 <br><br>
 </li>
 <li><b>2007 Mayo 23</b> (Gobierno de Reconciliacion y Paz) 
@@ -106,9 +123,9 @@
 <b>2001 Agusto 14</b> Por medio de nada mas que un Declaracion Jurada firmado por unos desconocidos, el Alcalde, Eddie Gallegos Gallegos, solicito un Inscripcion (con numero de Finca Nueva) un lote de 10Mz a favor de la Alcaldia de Catarina.
 <ul>
 <li>Declaracion Jurada y Solicitud de Inscripcion<br>
- <a href="Documents/CatarinaAlcaldiaDeclJudicial1.jpg" target="_blank">P #1</a>
+ <a href="documents/CatarinaAlcaldiaDeclJudicial1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
- <a href="Documents/CatarinaAlcaldiaDeclJudicial2.jpg" target="_blank">P #2</a>
+ <a href="documents/CatarinaAlcaldiaDeclJudicial2.jpg" target="_blank">P #2</a>
 
 
 
@@ -123,11 +140,11 @@
 <b>2002 Febrero 4</b> Inscripcion de una Finca Nueva a Favor del Alcaldia de Catarina (en base de un Declaracion Jurada?) autorizado por la Registradora de Masaya, Sra. Juana Prado
 <ul>
 <li>Certificacion Literal de Finca #63447, Tomo #446, Folios 202,203, Asiento <b>1</b>
- <a href="Documents/cert-lit-alcal-1.jpg" target="_blank">P #1</a>
+ <a href="documents/cert-lit-alcal-1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
  <a href="documents/cert-lit-alcal-2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
- <a href="Documents/cert-lit-alcal-3.jpg" target="_blank">P #3</a><br><br>
+ <a href="documents/cert-lit-alcal-3.jpg" target="_blank">P #3</a><br><br>
 </li>
 
 <li><b>2002 Octubre 3</b> 
@@ -166,16 +183,16 @@ Nota: Pronto despues que el Sr. Roman Cardoze emitio este aclaracion el fue cort
 
 <ul>
 <li>Certificacion de Sentencia:<br>
-<a href="Documents/CatarinaCARCertSentence1.jpg" target="_blank">P #1</a>
+<a href="documents/CatarinaCARCertSentence1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaCARCertSentence2.jpg" target="_blank">P #2</a>
+<a href="documents/CatarinaCARCertSentence2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaCARCertSentence3.jpg" target="_blank">P #3</a>
+<a href="documents/CatarinaCARCertSentence3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaCARCertSentence4.jpg" target="_blank">P #4</a>
+<a href="documents/CatarinaCARCertSentence4.jpg" target="_blank">P #4</a>
 
 </li> 
 </ul>
@@ -190,22 +207,22 @@ Nota: Pronto despues que el Sr. Roman Cardoze emitio este aclaracion el fue cort
 <li>
 Escritua de Compra-Venta:<br>
 
-<a href="Documents/CatarinaEscritura1.jpg" target="_blank">P #1</a>
+<a href="documents/CatarinaEscritura1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaEscritura2.jpg" target="_blank">P #2</a>
+<a href="documents/CatarinaEscritura2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaEscritura3.jpg" target="_blank">P #3</a>
+<a href="documents/CatarinaEscritura3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaEscritura4.jpg" target="_blank">P #4</a>
+<a href="documents/CatarinaEscritura4.jpg" target="_blank">P #4</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaEscritura5.jpg" target="_blank">P #5</a>
+<a href="documents/CatarinaEscritura5.jpg" target="_blank">P #5</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaEscritura6.jpg" target="_blank">P #6</a>
+<a href="documents/CatarinaEscritura6.jpg" target="_blank">P #6</a>
 
 </li>
 </ul>
@@ -216,13 +233,13 @@ Escritua de Compra-Venta:<br>
 <ul>
 <li>
 <b>2007 Junio 11</b> Inspeccion Ocular del Juez Distrito en la Propiedad<br> 
-<a href="Documents/Inspec-occ-1.jpg" target="_blank">P #1</a>
+<a href="documents/Inspec-occ-1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
-<a href="Documents/Inspec-occ-2.jpg" target="_blank">P #2</a>
+<a href="documents/Inspec-occ-2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
-<a href="Documents/Inspec-occ-3.jpg" target="_blank">P #3</a>
+<a href="documents/Inspec-occ-3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
-<a href="Documents/Inspec-occ-4.jpg" target="_blank">P #4</a>
+<a href="documents/Inspec-occ-4.jpg" target="_blank">P #4</a>
 <br><br>
 </li>
 <li>
@@ -284,25 +301,25 @@ Cooperacion de Austria
 
 <ul>
 <li><b>2007 Junio 7</b> 
-<a href="Documents/cat-alcal-june-7-2007.jpg" target="_blank">Carta a la Alcaldia de Catarina</a>
+<a href="documents/cat-alcal-june-7-2007.jpg" target="_blank">Carta a la Alcaldia de Catarina</a>
 </li>
 
 <li><b>2007 Junio 21</b> 
-<a href="Documents/cat-alcal-21-june-2007.jpg" target="_blank">Carta a la Alcaldia de Catarina</a>
+<a href="documents/cat-alcal-21-june-2007.jpg" target="_blank">Carta a la Alcaldia de Catarina</a>
 </li>
 
 <li>
 <b>2007 Junio 21</b> 
-<a href="Documents/pgr-1.jpg" target="_blank">Carta a la Procuraduria de la Republica</a>
+<a href="documents/pgr-1.jpg" target="_blank">Carta a la Procuraduria de la Republica</a>
 
 </li>
 <li>
 <b>2007 Junio 21</b> 
-<a href="Documents/contal-gen-1.jpg" target="_blank">Carta a la Contraloria General de Nicaragua</a>
+<a href="documents/contal-gen-1.jpg" target="_blank">Carta a la Contraloria General de Nicaragua</a>
 </li>
 <li>
 <b>2007 Junio 21</b> 
-<a href="Documents/asamblea-nat.jpg" target="_blank">Carta a la Asamblea Nacional de Nicaragua</a>
+<a href="documents/asamblea-nat.jpg" target="_blank">Carta a la Asamblea Nacional de Nicaragua</a>
 
 
 
@@ -310,13 +327,13 @@ Cooperacion de Austria
 <li>
 
 <b>2007 Junio 11</b> Inspeccion Ocular del Juez Distrito de la Propiedad<br> 
-<a href="Documents/Inspec-occ-1.jpg" target="_blank">P #1</a>
+<a href="documents/Inspec-occ-1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
-<a href="Documents/Inspec-occ-2.jpg" target="_blank">P #2</a>
+<a href="documents/Inspec-occ-2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
-<a href="Documents/Inspec-occ-3.jpg" target="_blank">P #3</a>
+<a href="documents/Inspec-occ-3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
-<a href="Documents/Inspec-occ-4.jpg" target="_blank">P #4</a>
+<a href="documents/Inspec-occ-4.jpg" target="_blank">P #4</a>
 <br><br>
 
 </li>
@@ -339,13 +356,13 @@ adentro la propiedad en disputa, en Contradiccion del Inspeccion Ocular del Juez
 <ul>
 <li><b>2008 Marzo 6</b> Ejecutoria de Sentencia:<br>
 
-<a href="Documents/CatarinaCPCertSentence1.jpg" target="_blank"> P #1</a>
+<a href="documents/CatarinaCPCertSentence1.jpg" target="_blank"> P #1</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaCPCertSentence2.jpg" target="_blank"> P #2</a>
+<a href="documents/CatarinaCPCertSentence2.jpg" target="_blank"> P #2</a>
 &nbsp;&nbsp;
 
-<a href="Documents/CatarinaCPCertSentence3.jpg" target="_blank"> P #3</a>
+<a href="documents/CatarinaCPCertSentence3.jpg" target="_blank"> P #3</a>
 <br><br>
 
 </li>
@@ -424,39 +441,39 @@ Pacheco
 <ul>
 <li>La Demanda y Reacusacion del Juez Distrito (Alcaldia de 
 Catarina)<br>
-<a href="Documents/car-deman-1.jpg" target="_blank">P #1</a>
+<a href="documents/car-deman-1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
-<a href="Documents/car-deman-2.jpg" target="_blank">P #2</a>
+<a href="documents/car-deman-2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
-<a href="Documents/car-deman-3.jpg" target="_blank">P #3</a>
+<a href="documents/car-deman-3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
-<a href="Documents/car-deman-4.jpg" target="_blank">P #4</a>
+<a href="documents/car-deman-4.jpg" target="_blank">P #4</a>
 &nbsp;&nbsp;
-<a href="Documents/car-deman-5.jpg" target="_blank">P #5</a>
+<a href="documents/car-deman-5.jpg" target="_blank">P #5</a>
 &nbsp;&nbsp;
-<a href="Documents/car-deman-6.jpg" target="_blank">P #6</a>
+<a href="documents/car-deman-6.jpg" target="_blank">P #6</a>
 </li>
 <br>
 <li>Contestacion de Demanda (Justin Dobson y Claudia Pacheco)</li>
-<a href="Documents/car-resp-1.jpg" target="_blank">P #1</a>
+<a href="documents/car-resp-1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-2.jpg" target="_blank">P #2</a>
+<a href="documents/car-resp-2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-3.jpg" target="_blank">P #3</a>
+<a href="documents/car-resp-3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-4.jpg" target="_blank">P #4</a>
+<a href="documents/car-resp-4.jpg" target="_blank">P #4</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-5.jpg" target="_blank">P #5</a>
+<a href="documents/car-resp-5.jpg" target="_blank">P #5</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-6.jpg" target="_blank">P #6</a>
+<a href="documents/car-resp-6.jpg" target="_blank">P #6</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-7.jpg" target="_blank">P #7</a>
+<a href="documents/car-resp-7.jpg" target="_blank">P #7</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-8.jpg" target="_blank">P #8</a>
+<a href="documents/car-resp-8.jpg" target="_blank">P #8</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-9.jpg" target="_blank">P #9</a>
+<a href="documents/car-resp-9.jpg" target="_blank">P #9</a>
 &nbsp;&nbsp;
-<a href="Documents/car-resp-10.jpg" target="_blank">P #10</a>
+<a href="documents/car-resp-10.jpg" target="_blank">P #10</a>
  
 </ul>
 
@@ -467,23 +484,23 @@ Catarina)<br>
 <b>2010 Julio 12</b> Sentencia de Juez Distrito de Masaya 
 <ul>
 <li>No Ha Lugar la Demanda de Cancelacion de Asiento Registral<br>
-<a href="Documents/car-sen-1.jpg" target="_blank">P #1</a>
+<a href="documents/car-sen-1.jpg" target="_blank">P #1</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-2.jpg" target="_blank">P #2</a>
+<a href="documents/car-sen-2.jpg" target="_blank">P #2</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-3.jpg" target="_blank">P #3</a>
+<a href="documents/car-sen-3.jpg" target="_blank">P #3</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-4.jpg" target="_blank">P #4</a>
+<a href="documents/car-sen-4.jpg" target="_blank">P #4</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-5.jpg" target="_blank">P #5</a>
+<a href="documents/car-sen-5.jpg" target="_blank">P #5</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-6.jpg" target="_blank">P #6</a>
+<a href="documents/car-sen-6.jpg" target="_blank">P #6</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-7.jpg" target="_blank">P #7</a>
+<a href="documents/car-sen-7.jpg" target="_blank">P #7</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-8.jpg" target="_blank">P #8</a>
+<a href="documents/car-sen-8.jpg" target="_blank">P #8</a>
 &nbsp;&nbsp;
-<a href="Documents/car-sen-9.jpg" target="_blank">P #9</a>
+<a href="documents/car-sen-9.jpg" target="_blank">P #9</a>
 
 </li>
 <br>
@@ -640,11 +657,16 @@ href="HONORABLE_TRIBUNAL_DE_APELACIONES_DE_MASAYA.pdf" target="_blank">Recurso d
 
 
 
-<div id="navigation">
+<div id="navigation"></div>
+<script>
+    fetch('menu.html') // Replace with your menu file path
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
 
-  <!--#include file="menu.htm" -->
-
-</div>
 
 
 

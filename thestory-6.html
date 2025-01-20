@@ -25,9 +25,26 @@
 </head>
 <body>
 <div id="container">
-<div id="header">
-  <!--#include file="header.htm" -->
-</div>
+  <div id="container">
+
+
+
+    <script>
+      // Load the header dynamically
+      fetch('header.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load header file');
+              }
+              return response.text();
+          })
+          .then(html => {
+              document.getElementById('header').innerHTML = html;
+          })
+          .catch(error => {
+              console.error('Error loading header:', error);
+          });
+  </script>
 
 
 <div id="wrapper">
@@ -46,11 +63,16 @@ With the sentence in hand, Mr Dobson and his wife sought all possibilities for a
 However, the Alcaldia's response was that they had alternative proposals from others, citing, "the owner of Pharaohs Casino". <br /></p>
 </div>
 </div>
-<div id="navigation">
+<div id="navigation"></div>
+<script>
+    fetch('menu.html') // Replace with your menu file path
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
 
-  <!--#include file="menu.htm" -->
-
-</div>
 
 
 <div class="c1" id="extra">
@@ -62,16 +84,16 @@ However, the Alcaldia's response was that they had alternative proposals from ot
 <td colspan="2">Masaya Court of Appeals<br/>Sentence</td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaCARCertSentence1.jpg" target="_blank"><img src="Documents/CatarinaCARCertSentence1.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg1" /><br/>Pg 1</a></td>
-<td><a href="Documents/CatarinaCARCertSentence2.jpg" target="_blank"><img src="Documents/CatarinaCARCertSentence2.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg2" /><br/>Pg 2</a></td>
+<td><a href="documents/CatarinaCARCertSentence1.jpg" target="_blank"><img src="documents/CatarinaCARCertSentence1.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg1" /><br/>Pg 1</a></td>
+<td><a href="documents/CatarinaCARCertSentence2.jpg" target="_blank"><img src="documents/CatarinaCARCertSentence2.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg2" /><br/>Pg 2</a></td>
 
 </tr>
 <tr>
 <td colspan="2"><br/></td>
 </tr>
 <tr>
-<td><a href="Documents/CatarinaCARCertSentence3.jpg" target="_blank"><img src="Documents/CatarinaCARCertSentence3.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg3" /><br/>Pg 3</a></td>
-<td><a href="Documents/CatarinaCARCertSentence4.jpg" target="_blank"><img src="Documents/CatarinaCARCertSentence4.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg4" /><br/>Pg 4</a></td>
+<td><a href="documents/CatarinaCARCertSentence3.jpg" target="_blank"><img src="documents/CatarinaCARCertSentence3.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg3" /><br/>Pg 3</a></td>
+<td><a href="documents/CatarinaCARCertSentence4.jpg" target="_blank"><img src="documents/CatarinaCARCertSentence4.jpg" width="40" alt="Masaya Court of Appeals Sentence Pg4" /><br/>Pg 4</a></td>
 </tr>
 </table>
 
